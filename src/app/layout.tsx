@@ -30,24 +30,11 @@ export const metadata: Metadata = {
     description: SITE_METADATA.description,
     url: SITE_METADATA.url,
     siteName: "Yüsra Kuloğlu",
-    images: [
-      {
-        url: SITE_METADATA.ogImage,
-        width: 1200,
-        height: 630,
-        alt: "Yüsra Kuloğlu — Frontend & Mobile Developer",
-      },
-    ],
     locale: "en_US",
     type: "website",
   },
-  twitter: {
-    card: "summary_large_image",
-    title: SITE_METADATA.title,
-    description: SITE_METADATA.description,
-    creator: SITE_METADATA.twitterHandle,
-    images: [SITE_METADATA.ogImage],
-  },
+
+  icons: "/favicon.png",
   robots: {
     index: true,
     follow: true,
@@ -55,11 +42,10 @@ export const metadata: Metadata = {
       index: true,
       follow: true,
       "max-video-preview": -1,
-      "max-image-preview": "large",
+      "max-image-preview": "none",
       "max-snippet": -1,
     },
   },
-  icons: "/favicon.png",
 };
 
 interface RootLayoutProps {

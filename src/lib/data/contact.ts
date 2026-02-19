@@ -1,4 +1,4 @@
-export type SocialIconName = "linkedin" | "github" | "instagram" | "twitter";
+export type SocialIconName = "linkedin" | "github" | "twitter";
 
 export interface SocialLink {
   id: string;
@@ -20,12 +20,7 @@ export const SOCIAL_LINKS: SocialLink[] = [
     url: "https://github.com/yusrakuloglu",
     iconName: "github",
   },
-  {
-    id: "instagram",
-    label: "Instagram",
-    url: "https://www.instagram.com/yusra.kuloglu/",
-    iconName: "instagram",
-  },
+
   {
     id: "twitter",
     label: "X (Twitter)",

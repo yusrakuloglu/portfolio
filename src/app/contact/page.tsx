@@ -2,15 +2,7 @@
 
 import { useState } from "react";
 import { motion, AnimatePresence, type Variants } from "framer-motion";
-import {
-  Linkedin,
-  Github,
-  Instagram,
-  Twitter,
-  Send,
-  Loader2,
-  Check,
-} from "lucide-react";
+import { Linkedin, Github, Twitter, Send, Loader2, Check } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 import { useMenuToggle } from "@/hooks/useMenuToggle";
 import { useContactForm } from "@/hooks/useContactForm";
@@ -23,19 +15,10 @@ import { SOCIAL_LINKS, type SocialIconName } from "@/lib/data/contact";
 const ICON_MAP: Record<SocialIconName, LucideIcon> = {
   linkedin: Linkedin,
   github: Github,
-  instagram: Instagram,
   twitter: Twitter,
 };
 
 /* ── Framer Motion variants ──────────────────────────────────── */
-const headerVariants: Variants = {
-  hidden: { y: -20, opacity: 0 },
-  visible: {
-    y: 0,
-    opacity: 1,
-    transition: { duration: 0.6, ease: "easeOut" as const },
-  },
-};
 
 const socialContainerVariants: Variants = {
   hidden: {},
