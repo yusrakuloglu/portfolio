@@ -1,13 +1,13 @@
 "use client";
 
-import { Linkedin, Github, Instagram, Twitter } from "lucide-react";
+import { Linkedin, Github, Twitter } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 import { SOCIAL_LINKS, type SocialIconName } from "@/lib/data/contact";
 
 const ICON_MAP: Record<SocialIconName, LucideIcon> = {
   linkedin: Linkedin,
   github: Github,
-  instagram: Instagram,
+
   twitter: Twitter,
 };
 
