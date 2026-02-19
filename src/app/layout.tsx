@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Cormorant_Garamond, DM_Sans } from "next/font/google";
 import { ThemeProvider } from "@/components/layout/ThemeProvider";
 import { Footer } from "@/components/layout/Footer";
+import { GoogleAnalytics } from "@/components/layout/GoogleAnalytics";
 import { SITE_METADATA } from "@/lib/constants";
 import "./globals.css";
 
@@ -77,6 +78,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
         style={{ fontFamily: "var(--font-dm-sans), system-ui, sans-serif" }}
       >
         <ThemeProvider>
+          <GoogleAnalytics />
           {children}
           <Footer />
         </ThemeProvider>
