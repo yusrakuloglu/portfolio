@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Github } from "lucide-react";
+import { Github, ExternalLink } from "lucide-react";
 import { Project } from "@/types";
 
 interface ProjectCardProps {
@@ -9,16 +9,20 @@ interface ProjectCardProps {
   index: number;
 }
 
-/* Inline Apple SVG — Lucide doesn't have one */
+/* Inline Apple SVG */
 const AppleIcon = () => (
-  <svg
-    width="16"
-    height="16"
-    viewBox="0 0 24 24"
-    fill="currentColor"
-    aria-hidden="true"
-  >
+  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
     <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z" />
+  </svg>
+);
+
+/* Inline Play Store SVG */
+const PlayStoreIcon = () => (
+  <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+    <path d="M1.22 0L1.22 0L13.46 12L1.22 24L1.22 24C0.89 23.79 0.67 23.43 0.67 23.01L0.67 0.99C0.67 0.57 0.89 0.21 1.22 0Z" />
+    <path d="M17.71 7.83L17.71 7.83L14.57 11L4.17 0.57L16.66 7.16C17.01 7.34 17.29 7.57 17.71 7.83Z" opacity="0.8" />
+    <path d="M17.71 16.17C17.29 16.43 17.01 16.66 16.66 16.84L4.17 23.43L14.57 13L17.71 16.17Z" opacity="0.8" />
+    <path d="M18.72 8.34L18.72 8.34L21.89 9.97C22.73 10.42 23.33 11 23.33 12C23.33 13 22.73 13.53 21.89 13.97L18.72 15.66L15.18 12L18.72 8.34Z" opacity="0.6" />
   </svg>
 );
 
@@ -138,7 +142,11 @@ export const ProjectCard = ({ project, index }: ProjectCardProps) => {
       {/* Link buttons */}
       <div className="flex flex-wrap gap-3 pt-1">
         {project.links.map((link) => {
-          if (link.type === "appstore" || link.type === "playstore") {
+          const isStore =
+            link.type === "appstore" || link.type === "playstore";
+          const isExternal = link.type === "github" || link.type === "live";
+
+          if (isStore) {
             return (
               <a
                 key={link.type}
@@ -162,13 +170,13 @@ export const ProjectCard = ({ project, index }: ProjectCardProps) => {
                     "color-mix(in srgb, var(--accent) 10%, transparent)";
                 }}
               >
-                <AppleIcon />
+                {link.type === "appstore" ? <AppleIcon /> : <PlayStoreIcon />}
                 {link.label}
               </a>
             );
           }
 
-          if (link.type === "github") {
+          if (isExternal) {
             return (
               <a
                 key={link.type}
@@ -192,7 +200,11 @@ export const ProjectCard = ({ project, index }: ProjectCardProps) => {
                   el.style.color = "var(--text-secondary)";
                 }}
               >
-                <Github size={14} />
+                {link.type === "github" ? (
+                  <Github size={14} />
+                ) : (
+                  <ExternalLink size={14} />
+                )}
                 {link.label}
               </a>
             );

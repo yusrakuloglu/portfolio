@@ -34,7 +34,15 @@ export const metadata: Metadata = {
     type: "website",
   },
 
-  icons: "/favicon.png",
+  icons: {
+    icon: [
+      { url: "/favicon.ico" },
+      { url: "/favicon.png", type: "image/png" },
+    ],
+    apple: [
+      { url: "/favicon.png" },
+    ],
+  },
   robots: {
     index: true,
     follow: true,
@@ -42,7 +50,7 @@ export const metadata: Metadata = {
       index: true,
       follow: true,
       "max-video-preview": -1,
-      "max-image-preview": "none",
+      "max-image-preview": "large",
       "max-snippet": -1,
     },
   },

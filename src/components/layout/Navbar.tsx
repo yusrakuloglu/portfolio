@@ -15,10 +15,7 @@ interface NavbarProps {
 export const Navbar = ({ onMenuOpen }: NavbarProps) => {
   const pathname = usePathname();
   const { resolvedTheme } = useTheme();
-  const logoSrc =
-    resolvedTheme === "dark"
-      ? "/images/logo-dark.png"
-      : "/images/portfolio-logo.png";
+  const logoSrc = "/images/logo-dark.png";
 
   return (
     <header

@@ -23,6 +23,11 @@ export const projects: Project[] = [
         url: "https://apps.apple.com/tr/app/i-%C5%9F-anahtar%C4%B1/id6474029253",
         type: "appstore",
       },
+      {
+        label: "Google Play",
+        url: "https://play.google.com/store/apps/details?id=com.isanahtari",
+        type: "playstore",
+      },
     ],
   },
 
