@@ -20,9 +20,18 @@ const AppleIcon = () => (
 const PlayStoreIcon = () => (
   <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
     <path d="M1.22 0L1.22 0L13.46 12L1.22 24L1.22 24C0.89 23.79 0.67 23.43 0.67 23.01L0.67 0.99C0.67 0.57 0.89 0.21 1.22 0Z" />
-    <path d="M17.71 7.83L17.71 7.83L14.57 11L4.17 0.57L16.66 7.16C17.01 7.34 17.29 7.57 17.71 7.83Z" opacity="0.8" />
-    <path d="M17.71 16.17C17.29 16.43 17.01 16.66 16.66 16.84L4.17 23.43L14.57 13L17.71 16.17Z" opacity="0.8" />
-    <path d="M18.72 8.34L18.72 8.34L21.89 9.97C22.73 10.42 23.33 11 23.33 12C23.33 13 22.73 13.53 21.89 13.97L18.72 15.66L15.18 12L18.72 8.34Z" opacity="0.6" />
+    <path
+      d="M17.71 7.83L17.71 7.83L14.57 11L4.17 0.57L16.66 7.16C17.01 7.34 17.29 7.57 17.71 7.83Z"
+      opacity="0.8"
+    />
+    <path
+      d="M17.71 16.17C17.29 16.43 17.01 16.66 16.66 16.84L4.17 23.43L14.57 13L17.71 16.17Z"
+      opacity="0.8"
+    />
+    <path
+      d="M18.72 8.34L18.72 8.34L21.89 9.97C22.73 10.42 23.33 11 23.33 12C23.33 13 22.73 13.53 21.89 13.97L18.72 15.66L15.18 12L18.72 8.34Z"
+      opacity="0.6"
+    />
   </svg>
 );
 
@@ -142,9 +151,8 @@ export const ProjectCard = ({ project, index }: ProjectCardProps) => {
       {/* Link buttons */}
       <div className="flex flex-wrap gap-3 pt-1">
         {project.links.map((link) => {
-          const isStore =
-            link.type === "appstore" || link.type === "playstore";
-          const isExternal = link.type === "github" || link.type === "live";
+          const isStore = link.type === "appstore" || link.type === "playstore";
+          const isExternal = link.type === "github";
 
           if (isStore) {
             return (

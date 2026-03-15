@@ -154,11 +154,6 @@ export const projects: Project[] = [
     ],
     links: [
       {
-        label: "Live Site",
-        url: "https://yusrakuloglu.vercel.app", // TODO: replace with real Vercel URL after deployment
-        type: "live",
-      },
-      {
         label: "GitHub",
         url: "https://github.com/yusrakuloglu/portfolio", // TODO: replace with real repo URL
         type: "github",
