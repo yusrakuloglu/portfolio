@@ -3,6 +3,28 @@ import { Project } from "@/types";
 export const projects: Project[] = [
   // ── PROFESSIONAL ──────────────────────────────────────────
   {
+    slug: "cura",
+    title: "Cura",
+    category: "professional",
+    type: "frontend",
+    tech: ["Next.js 16", "TypeScript", "Tailwind CSS", "Recharts", "NextAuth.js"],
+    description:
+      "Frontend for a RAG-based bilingual medical chatbot platform built for breast cancer patient education and clinical decision support, accepted by TÜBİTAK 2209-A.",
+    highlights: [
+      "Developed dual-mode interfaces (patient/health professional) with role-based theming and JWT-authenticated routing",
+      "Implemented real-time streaming chat using the Fetch + ReadableStream API",
+      "Built an interactive analytics dashboard with Recharts featuring resilient JSON schema validation for LLM-generated visualizations",
+      "Designed an isolated client-side data persistence layer separating patient and clinician conversation histories",
+    ],
+    links: [
+      {
+        label: "Website",
+        url: "https://cura-medi.com",
+        type: "live",
+      },
+    ],
+  },
+  {
     slug: "is-anahtari",
     title: "İş Anahtarı",
     category: "professional",
@@ -49,29 +71,6 @@ export const projects: Project[] = [
     links: [],
   },
   {
-    slug: "talk-and-write",
-    title: "Talk & Write",
-    category: "personal",
-    type: "frontend",
-    tech: ["Angular", "TypeScript", "HTML", "CSS"],
-    description:
-      "A blog and forum platform (StackByMe) built with Angular, featuring user authentication, a rich-text blog editor, and a Q&A forum with upvote/downvote functionality.",
-    highlights: [
-      "User authentication (login & registration)",
-      "Q&A forum with upvote/downvote voting system",
-      "Blog module with rich-text article editor (Angular Editor)",
-      "Reactive forms and Angular Router with lazy-like routing",
-      "REST API integration via HttpClient",
-    ],
-    links: [
-      {
-        label: "GitHub",
-        url: "https://github.com/yusrakuloglu/Blog-Forum-Project-Angular",
-        type: "github",
-      },
-    ],
-  },
-  {
     slug: "trendynow",
     title: "TrendyNow — E-commerce",
     category: "personal",
@@ -88,29 +87,6 @@ export const projects: Project[] = [
       {
         label: "GitHub",
         url: "https://github.com/yusrakuloglu/Basic-E-commerce-Project-Javascript",
-        type: "github",
-      },
-    ],
-  },
-  {
-    slug: "todo-app",
-    title: "TODO App",
-    category: "personal",
-    type: "frontend",
-    tech: ["Angular", "TypeScript", "Angular Material"],
-    description:
-      "A task management app where users can create multiple to-do lists, add tasks with checklists to each list, and track completion by checking or unchecking items.",
-    highlights: [
-      "Multi-list management with create, delete, and search/filter",
-      "Tasks with checklist items and completion tracking",
-      "Angular Material dialogs and snackbar notifications",
-      "LocalStorage persistence for state across sessions",
-      "Reactive Forms with validation",
-    ],
-    links: [
-      {
-        label: "GitHub",
-        url: "https://github.com/yusrakuloglu/ToDoApp-Project-Angular",
         type: "github",
       },
     ],

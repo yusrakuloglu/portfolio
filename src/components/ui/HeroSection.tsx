@@ -91,7 +91,7 @@ export const HeroSection = () => {
 
           <div className="mt-4 flex items-center gap-6">
             <a
-              href="/resume.pdf"
+              href="/Yusra_CV.pdf"
               download
               className="group inline-flex items-center gap-2 text-sm tracking-widest uppercase transition-all duration-300 px-4 py-2 rounded-lg"
               style={{

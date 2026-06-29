@@ -15,7 +15,6 @@ import {
 } from "react-icons/fa";
 import {
   SiNextdotjs,
-  SiAngular,
   SiTypescript,
   SiJavascript,
   SiTailwindcss,
@@ -42,7 +41,6 @@ import { SKILL_CATEGORIES } from "@/lib/constants";
 const ICON_MAP: Record<string, IconType> = {
   react: FaReact,
   nextjs: SiNextdotjs,
-  angular: SiAngular,
   typescript: SiTypescript,
   javascript: SiJavascript,
   html5: FaHtml5,

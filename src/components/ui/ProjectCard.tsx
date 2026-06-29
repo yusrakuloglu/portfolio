@@ -44,7 +44,7 @@ export const ProjectCard = ({ project, index }: ProjectCardProps) => {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-60px" }}
       transition={{ duration: 0.5, delay: index * 0.1, ease: "easeOut" }}
-      className="rounded-2xl p-7 md:p-8 flex flex-col gap-5"
+      className="rounded-2xl p-7 md:p-8 flex flex-col gap-5 h-full"
       style={{
         backgroundColor: "var(--bg-secondary)",
         border: isProfessional
@@ -149,10 +149,10 @@ export const ProjectCard = ({ project, index }: ProjectCardProps) => {
       </ul>
 
       {/* Link buttons */}
-      <div className="flex flex-wrap gap-3 pt-1">
+      <div className="flex flex-wrap gap-3 mt-auto pt-1">
         {project.links.map((link) => {
           const isStore = link.type === "appstore" || link.type === "playstore";
-          const isExternal = link.type === "github";
+          const isExternal = link.type === "github" || link.type === "live";
 
           if (isStore) {
             return (
