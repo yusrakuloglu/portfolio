@@ -59,16 +59,23 @@ export const projects: Project[] = [
     title: "MindTrack — Habit Tracker",
     category: "professional",
     type: "mobile",
-    tech: ["React Native", "Firebase", "Firestore"],
+    tech: ["React Native", "Expo", "Firebase", "Firestore", "RevenueCat", "Cloud Functions"],
     description:
-      "Cross-platform habit tracking app with real-time Firestore sync, push notifications, and smooth platform-specific animations for iOS and Android.",
+      "Cross-platform habit-tracking app with Firebase Authentication and real-time Firestore sync. Features RevenueCat-powered iOS/Android subscriptions, Cloud Functions for transactional emails, custom notification engine, and full i18n support (TR/EN/ES).",
     highlights: [
-      "Firebase Auth & real-time Firestore sync",
-      "Push notifications with Cloud Messaging",
-      "Platform-specific UI following Material Design & iOS HIG",
-      "Smooth animations with React Native Animated API",
+      "Firebase Auth & real-time Firestore data sync via custom service-layer listeners",
+      "RevenueCat integration for iOS/Android in-app subscriptions with entitlement-gated premium features",
+      "Firebase Cloud Functions for transactional email delivery (verification, password reset)",
+      "Custom notification engine with flexible reminder-time parsing via expo-notifications",
+      "Full internationalization support (Turkish, English, Spanish)",
     ],
-    links: [],
+    links: [
+      {
+        label: "App Store",
+        url: "https://apps.apple.com/tr/app/mindtrack-focus-habits/id6800670055?l=tr",
+        type: "appstore",
+      },
+    ],
   },
   {
     slug: "trendynow",

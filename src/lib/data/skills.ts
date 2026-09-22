@@ -15,6 +15,9 @@ export const SKILL_CATEGORIES: SkillCategory[] = [
       { name: "Tailwind CSS", iconKey: "tailwind" },
       { name: "Material UI", iconKey: "mui" },
       { name: "ShadCN", iconKey: "shadcn" },
+      { name: "Framer Motion", iconKey: "framer" },
+      { name: "Recharts", iconKey: "recharts" },
+      { name: "NextAuth.js", iconKey: "nextauth" },
     ],
   },
   {
@@ -24,6 +27,7 @@ export const SKILL_CATEGORIES: SkillCategory[] = [
     skills: [
       { name: "Flutter", iconKey: "flutter" },
       { name: "React Native", iconKey: "react-native" },
+      { name: "Expo", iconKey: "expo" },
       { name: "Dart", iconKey: "dart" },
     ],
   },
@@ -47,6 +51,8 @@ export const SKILL_CATEGORIES: SkillCategory[] = [
       { name: "Axios", iconKey: "axios" },
       { name: "Firebase", iconKey: "firebase" },
       { name: "Firestore", iconKey: "firestore" },
+      { name: "Cloud Functions", iconKey: "cloudfunctions" },
+      { name: "RevenueCat", iconKey: "revenuecat" },
     ],
   },
   {
